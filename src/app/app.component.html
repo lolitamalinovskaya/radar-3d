@@ -1,4 +1,7 @@
-<div class="input-inner">
-    <label for="segment">Segment number</label>
-    <input type="number" min="1" max="100" id="segment" />
+<div [formGroup]="form">
+    <div class="input-inner">
+        <label for="segment">Segment number</label>
+        <input type="number" min="1" max="25" id="segment" formControlName="segmentNumber" (input)="onSegmentNumberChange()"  />
+        <small class="error" *ngIf="form.controls['segmentNumber']?.errors?.['min'] || form.controls['segmentNumber']?.errors?.['max']">Invalid value</small>
+    </div>
 </div>

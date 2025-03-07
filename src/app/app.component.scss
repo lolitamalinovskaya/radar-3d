@@ -1,8 +1,35 @@
 .input-inner {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
   margin: 3rem;
-  background-color: #f4f4f4;
+  background-color: #F4F4F493;
+  border: 1px solid #777373;
+  width: 12rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    border: 1px solid #777373;
+    border-radius: 8px;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px;
+    height: 40px;
+    &:focus {
+      outline: none;
+      border: 1px solid black;
+    }
+  }
+
+  .error {
+    color: #863535;
+    font-size: 12px;
+    margin-top: 0.5rem;
+  }
 }
